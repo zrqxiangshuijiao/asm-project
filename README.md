@@ -25,12 +25,9 @@ Code:
 
 	LDI R21, (1 << PE4);set the register
 	
-  OUT DDRE,R21 ;set port E to output
+ OUT DDRE,R21 ;set port E to output
 	
-  //LDI R22,0xFF
-	
-  //OUT DDRB,R22 ;set portB to output
-
+  
  hel:
 
 	IN R20,PINE;set the register
