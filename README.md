@@ -11,9 +11,15 @@ There are 2 possible states for the program
 * LightOff - state where LED is off.
 
 [//]: # (Description of state)
-When there is movement in front of PIR Movement sensor program goes to LightOn state, after 2.5 seconds it goes back to LightOff state.
+When there is movement in front of PIR Movement sensor program goes to LightOn state, after 3 seconds it goes back to LightOff state.
 ## Testing
+PIR Movement sensor test and LED:
+Purpose for the test is to test PIR Movement sensor and LED
+Excepted result:
+When there is movement in front of PIR Movement sensor the LED lights up.
+
 ![Test](https://github.com/zrqxiangshuijiao/asm-project/blob/master/diagrams/diagram2.png)
+
 
 ## Project diagram  
 
