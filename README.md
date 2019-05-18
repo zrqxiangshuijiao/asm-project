@@ -25,10 +25,10 @@ Code:
 
 	LDI R21, (1 << PE4);set the register
 	
-      OUT DDRE,R21 ;set port E to output
+    OUT DDRE,R21 ;set port E to output
 	
   
-      hel:
+    hel:
 
 	IN R20,PINE;set the register
   
@@ -44,7 +44,7 @@ Code:
   
 	JMP hel
   
-      on:
+    on:
 
 	LDI R17, (1 << PE4);set the register
   
