@@ -15,10 +15,51 @@ When there is movement in front of PIR Movement sensor program goes to LightOn s
 ## Testing
 PIR Movement sensor test and LED:
 Purpose for the test is to test PIR Movement sensor and LED
+
 Excepted result:
 When there is movement in front of PIR Movement sensor the LED lights up.
 
 ![Test](https://github.com/zrqxiangshuijiao/asm-project/blob/master/diagrams/diagram2.png)
+
+Code:
+
+	LDI R21, (1 << PE4);set the register
+	
+  OUT DDRE,R21 ;set port E to output
+	
+  //LDI R22,0xFF
+	
+  //OUT DDRB,R22 ;set portB to output
+
+ hel:
+
+	IN R20,PINE;set the register
+  
+	ANDI R20, (1 << PE5);do and
+  
+	CPI R20,0 ;compare R20 and 0
+  
+	BRNE on ;if not,go to on
+  
+	LDI R17,0
+  
+	OUT PORTE,R17
+  
+	JMP hel
+  
+on:
+
+	LDI R17, (1 << PE4);set the register
+  
+	OUT PORTE,R17
+  
+	JMP hel
+
+
+
+Result:
+Result as expected. When there is movement LED light up
+
 
 
 ## Project diagram  
